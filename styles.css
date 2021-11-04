@@ -342,3 +342,32 @@ Grocery List
 .clear-btn:hover {
   color: var(--clr-red-dark);
 }
+
+.btn-bg-container{
+  margin:2rem;
+  /* display: flex;
+  justify-content: center;
+  align-items:center; */
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.btn-bg-change{
+  padding:1rem;
+  border-radius: var(--radius);
+  font-family: var(--ff-secondary);
+  font-size: 0.95rem;
+  color: var(--page-background);
+}
+
+.affirmation-container {
+  height:4rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.affirmation-text{
+  font-size:20px;
+  color:white;
+}
