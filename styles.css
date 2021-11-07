@@ -13,29 +13,31 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
+  /* --clr-primary-1: hsl(205, 86%, 17%);
   --clr-primary-2: hsl(205, 77%, 27%);
   --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
+  --clr-primary-4: hsl(205, 63%, 48%); */
   /* primary/main color */
-  --clr-primary-5: #49a6e9;
+  /* --clr-primary-5: #49a6e9; */
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
+  /* --clr-primary-6: hsl(205, 89%, 70%);
   --clr-primary-7: hsl(205, 90%, 76%);
   --clr-primary-8: hsl(205, 86%, 81%);
   --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
+  --clr-primary-10: hsl(205, 100%, 96%); */
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
+  /* --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-4: hsl(209, 28%, 39%); */
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
+  /* --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-6: hsl(209, 23%, 60%);
   --clr-grey-7: hsl(211, 27%, 70%);
   --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-9: hsl(212, 33%, 89%); */
+
+  
   --clr-grey-10: hsl(210, 36%, 96%);  // main background
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
@@ -83,7 +85,7 @@ body {
   /* color: var(--clr-grey-1); */
   background: var(--page-background);
   line-height: 1.5;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 ul {
   list-style-type: none;
@@ -190,7 +192,7 @@ main {
 }
 /*
 =============== 
-Grocery List
+Gratitude List
 ===============
 */
 .section-center {
@@ -199,6 +201,7 @@ Grocery List
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   padding: 2rem;
+  background-color: #8383838a;
 }
 .section-center:hover {
   box-shadow: var(--dark-shadow);
@@ -222,7 +225,7 @@ Grocery List
   color: #155724;
   background: #d4edda;
 }
-.grocery-form h3 {
+.gratitude-form h3 {
   color: var(--input-hover);
   margin-bottom: 1.5rem;
   text-align: center;
@@ -230,8 +233,10 @@ Grocery List
 .form-control {
   display: flex;
   justify-content: center;
+  height:3rem;
+  
 }
-#grocery {
+#gratitude {
   padding: 0.25rem;
   padding-left: 1rem;
   background: white;
@@ -242,7 +247,7 @@ Grocery List
   flex: 1 0 auto;
   color: var(--clr-grey-5);
 }
-#grocery::placeholder {
+#gratitude::placeholder {
   font-family: var(--ff-secondary);
   color: var(--clr-grey-5);
 }
@@ -268,7 +273,7 @@ Grocery List
   color: var(--page-background);
 }
 
-.grocery-container {
+.gratitude-container {
   margin-top: 2rem;
   transition: var(--transition);
   visibility: hidden;
@@ -276,7 +281,7 @@ Grocery List
 .show-container {
   visibility: visible;
 }
-.grocery-item {
+.gratitude-item {
   background-color: var(--text-input);
   display: flex;
   align-items: center;
@@ -287,11 +292,11 @@ Grocery List
   border-radius: var(--radius);
   text-transform: capitalize;
 }
-.grocery-item:hover {
+.gratitude-item:hover {
   color: var(--nice-yellow);
   background: var(--input-hover);
 }
-.grocery-item:hover .title {
+.gratitude-item:hover .title {
   color: var(--clr-grey-5);
 }
 .title {
@@ -370,4 +375,16 @@ Grocery List
 .affirmation-text{
   font-size:20px;
   color:white;
+}
+
+/* Test Video BG */
+video {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  z-index:-1;
+  display:block;
+  object-fit:cover;
 }
