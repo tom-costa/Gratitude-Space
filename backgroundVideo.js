@@ -1,4 +1,4 @@
-const videoSources = ["assets/pexels-rostislav-uzunov-7385122.mp4","assets/productionID_4779866.mp4", "assets/pexels-rostislav-uzunov-9629255.mp4", "assets/pexels-rostislav-uzunov-8303104.mp4"];
+const videoSources = ["videos/pexels-rostislav-uzunov-7385122.mp4","videos/productionID_4779866.mp4", "videos/pexels-rostislav-uzunov-9629255.mp4", "videos/pexels-rostislav-uzunov-8303104.mp4", "videos/pexels-rostislav-uzunov-6151238.mp4"];
 
 const btnBg = document.querySelector(".btn-bg-change");
 
@@ -12,3 +12,5 @@ btnBg.addEventListener('click', function(){
     }
     document.querySelector('.videoBg').innerHTML = `<video src=${videoSources[bgchoice]} autoplay loop></video>`
 });
+
+

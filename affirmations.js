@@ -49,7 +49,7 @@ const affirmationList = [
   ];
 
 const affirmations = document.querySelector('.affirmation-text');
-const getRandomAffirmations = () => affirmationList[Math.floor(Math.random() * affirmationList.length)]
+const getRandomAffirmations = () => (affirmationList[Math.floor(Math.random() * affirmationList.length)]+ "!")
 
 function showAffirmation() {
     document.querySelector('.affirmation-text').innerHTML = getRandomAffirmations();

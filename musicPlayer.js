@@ -10,10 +10,10 @@ const playBtn = document.querySelector('#play');
 const nextBtn = document.querySelector('#next');
 
 // Array with Song titles:
-const songs = ["hey", "summer", "ukulele"]
+const songs = [ "Spatial", "Adventure is Calling", "The long ride home", "Thermal", "Live it"]
 
 // Song Index (keep track of songs):
-let songIndex = 1;
+let songIndex = 0;
 
 // To initially load song info:
 loadSong(songs[songIndex]);
@@ -67,8 +67,6 @@ function nextSong() {
 function updateProgress(e){
     // currentTime and duration are HTML Media elements, use them to calculate progress percentage:
     const { duration, currentTime } = e.srcElement;
-    // const currentTime = e.srcElement.currentTime
-    // const duration = e.srcElement.duration
     const progressPercent = (currentTime/ duration) * 100;
     progress.style.width = `${progressPercent}%`;
 }

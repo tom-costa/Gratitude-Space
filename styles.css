@@ -1,77 +1,35 @@
 /*
 =============== 
 Fonts
-===============
-*/
+=============== */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 /*
 =============== 
 Variables
-===============
-*/
-
+=============== */
 :root {
-  /* dark shades of primary color*/
-  /* --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%); */
-  /* primary/main color */
-  /* --clr-primary-5: #49a6e9; */
-  /* lighter shades of primary color */
-  /* --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%); */
-  /* darkest grey - used for headings */
-  /* --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%); */
-  /* grey used for paragraphs */
-  /* --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%); */
-
-  
-  --clr-grey-10: hsl(210, 36%, 96%);  // main background
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.3s linear;
-  --spacing: 0.25rem;
-  --radius: 0.5rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-
-   /* New color scheme */
+   --clr-white: #fff;
+   --clr-black: #222;
+   --ff-secondary: "Open Sans", sans-serif;
   --text-clr: #4C5454;
   --page-background: #4C5454;
   --text-input: #EEE5E9;
   --input-hover: #FCF5C7;
-  
-  --modal-background: #FF715B;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
   --clr-orange: #FEA82F;
   --clr-red: #FF2E00;
-  /* --btn-submit: #1EA896; */
+  --main-green: #28a745;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
 }
 /*
 =============== 
 Global Styles
-===============
-*/
+=============== */
 
 *,
 ::after,
@@ -82,8 +40,6 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  /* background: var(--clr-grey-10); */
-  /* color: var(--clr-grey-1); */
   background: var(--page-background);
   line-height: 1.5;
   font-size: 1rem;
@@ -109,7 +65,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: "Roboto", sans-serif;
 }
 h1 {
   font-size: 3rem;
@@ -170,23 +126,17 @@ p {
   color: var(--clr-white);
   background: var(--clr-black);
 }
-/* section */
+
+/* Main section */
 .section {
   padding: 5rem 0;
 }
 
-.section-center {
-  /* width: 90vw;
-  margin: 0 auto;
-  max-width: 35rem;
-  margin-top: 8rem; */
-}
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
 }
-
 
 main {
   min-height: 100vh;
@@ -199,12 +149,10 @@ Gratitude List
 ===============
 */
 .section-center {
-  /* background: var(--modal-background); */
   border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
   padding: 2rem;
-  /* background-color: #8383838a; */
   background-color: rgba(255,255,255, 0.5);
   width: 90vw;
   margin: 0 auto;
@@ -213,7 +161,7 @@ Gratitude List
   box-shadow: 5px 0px 20px rgb(46, 45, 45);
 }
 .section-center:hover {
-  box-shadow: var(--dark-shadow);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .alert {
   margin-bottom: 1rem;
@@ -231,14 +179,16 @@ Gratitude List
   background: rgba(255,255,255, 0.5);
 }
 .alert-success {
-  color: #155724;
+  color: var(--main-green);
   background-color: rgba(255,255,255, 0.5);
 }
 .gratitude-form h3 {
-  color: var(--input-hover);
+  font-size: 2.3rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  font-weight:bolder;
   color: var(--text-clr);
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
 }
 .form-control {
   display: flex;
@@ -249,21 +199,20 @@ Gratitude List
 #gratitude {
   padding: 0.25rem;
   padding-left: 1rem;
-  background: white;
+  background: var(--clr-white);
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
   border-color: transparent;
   font-size: 1rem;
   flex: 1 0 auto;
-  /* color: var(--clr-grey-5); */
+
 }
 #gratitude::placeholder {
   font-style: italic;
 }
 .submit-btn {
-  background: #28a745;
-  /* color:var(--page-background); */
-  color:white;
+  background: var(--main-green);
+  color:var(--clr-white);
   border-color: transparent;
   flex: 0 0 5rem;
   display: grid;
@@ -279,8 +228,8 @@ Gratitude List
   font-size: 0.85rem;
 }
 .submit-btn:hover {
-  background: #1a6e2d;
-  color: rgb(165, 163, 163);
+  background: #1a612b !important;
+  color: var(--clr-white);
 }
 
 .gratitude-container {
@@ -292,7 +241,7 @@ Gratitude List
   visibility: visible;
 }
 .gratitude-item {
-  background-color: white;
+  background-color: var(--clr-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -325,7 +274,7 @@ Gratitude List
   transition: var(--transition);
 }
 .edit-btn {
-  color: #28a745;
+  color: var(--main-green);
 }
 .edit-btn:hover {
   color: var(--btn-submit);
@@ -342,15 +291,15 @@ Gratitude List
   height: 2rem;
   display: grid;
   align-items: center;
-  border-color: var(--grocery-input);
+  border:2px solid grey;
   border-radius: var(--radius);
-  color: var(--page-background);
   margin: 0 auto;
   font-size: 0.95rem;
-  /* letter-spacing: var(--spacing); */
   cursor: pointer;
   transition: var(--transition);
   margin-top: 1.25rem;
+  background-color:var(--clr-white);
+  color:rgba(54, 54, 54, 0.87);;
 }
 .clear-btn:hover {
   color: var(--clr-red);
@@ -368,16 +317,15 @@ Gratitude List
   border-radius: var(--radius);
   font-family: var(--ff-secondary);
   font-size: 0.95rem;
-  background-color:white;
-  color:#28a745;
+  background-color:var(--clr-white);
+  color:var(--main-green);
   box-shadow: 5px 0px 20px rgb(46, 45, 45);
 }
 .btn-bg-change:hover{
   background-color:rgba(54, 54, 54, 0.87);
-  color:white;
+  color:var(--clr-white);
 }
 
-/*  Affirmation Quotes: */
 .affirmation-container {
   display:flex;
   align-items:center;
@@ -389,7 +337,7 @@ Gratitude List
 }
 .affirmation-text{
   font-size:2rem;
-  color:white;
+  color:var(--clr-white);
   text-align:center;
   font-style:italic;
   text-shadow: 10px 10px 25px rgba(245, 245, 245),
@@ -397,7 +345,6 @@ Gratitude List
     -10px -10px 25px rgb(245, 245, 245),
     10px -10px 25px rgb(245, 245, 245);
 }
-
 
 @media screen and (min-width: 760px) {
   .affirmation-container {
@@ -407,11 +354,14 @@ Gratitude List
 
 @media screen and (max-width: 600px){
   .affirmation-container {
-    margin-bottom:-7rem;
+    margin-bottom:-6rem;
   }
 }
 
-/* Video Background: */
+/* 
+===============
+Video Background
+=============== */
 video {
   position:fixed;
   left:0;
@@ -423,8 +373,10 @@ video {
   object-fit:cover;
 }
 
-/* MUSIC PLAYER: */
-
+/* 
+===============
+MUSIC PLAYER:
+=============== */
 .music-container{
     background-color:rgba(54, 54, 54, 0.87);
     border-radius:15px;
@@ -432,26 +384,24 @@ video {
     display:flex;
     position:fixed;
     padding:20px 20px;
-    margin:100px 20px;
+    margin:60px 20px;
     z-index:10;
     bottom:0;
     left:0;
-    width:330px;
+    width:270px;
     box-shadow: 5px 0px 20px rgb(46, 45, 45);
+    transition: var(--transition)
 }
 
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1140px) {
   .music-container {
-    position:absolute;
-    bottom:0;
-    
+    position:relative;
   }
 }
 
 @media screen and (max-width: 760px) {
   .music-container {
     position:relative;
-    /* bottom: 50%; */
     left: 50%;
     transform: translate(-55%);
   }
@@ -461,18 +411,6 @@ video {
     position:relative;
     width:100px;
     margin-bottom:10px;
-}
-
-.img-container::after {
-    /* content:'';
-    background-color:white;
-    height:20px;
-    width:20px;
-    position:absolute;
-    left: 50%;
-    bottom:50%;
-    border-radius:50%;
-    transform: translate(-50%, -50%); */
 }
 
 .img-container img{
@@ -544,11 +482,12 @@ video {
     padding:10px 10px 10px 85px;
     transition: transform 0.3s ease-in, opacity 0.3s ease-in;
     box-shadow: 5px 0px 20px rgb(46, 45, 45);
-    height:50px;
+    height:60px;
 }
 
 .music-info h4 {
     margin:0;
+    font-size:0.875rem;
 }
 
 .music-container.play .music-info{
@@ -557,7 +496,7 @@ video {
 }
 
 .progress-container{
-    background:white;
+    background:var(--clr-white);
     /* color:black; */
     cursor: pointer;
     border-radius: 5px;
@@ -567,10 +506,10 @@ video {
 }
 
 .progress{
-    background-color:#28a745;
+    background-color:var(--main-green);
     border-radius:5px;
     height:100%;
-    width:0%;  // JS to increase width as it plays
+    width:0%;  // JS code increases width as it plays
     transition: width 0.1s linear
 }
 
