@@ -1,86 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gratitude Space</title>
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="affirmation-container">
-      <div class="affirmation-text">"All you need is the plan, the roadmap, and the courage to press on to your destination"
-      </div>
-    </div>
-    <section class="section-center">
-      <!-- form -->
 
-      <form class="gratitude-form">
-        <p class="alert"></p>        
-        <h3>GRATITUDE Space</h3>
-        <div class="form-control">
-          <input type="text" id="gratitude" placeholder="e.g. I'm grateful for my family...">
-          <button type="submit" class="submit-btn">submit</button>
-        </div>
-      </form>
-      <!-- list -->
-      <div class="gratitude-container">
-        <div class="gratitude-list"></div>
-        <button type="button" class="clear-btn">clear items</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gratitude Space</title>
+  <link
+  rel="icon"
+  href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🙏</text></svg>"
+/>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="affirmation-container">
+    <div class="affirmation-text">
+    </div>
+  </div>
+  <section class="section-center">
+    <!-- form -->
+
+    <form class="gratitude-form">
+      <p class="alert"></p>
+      <h3>GRATITUDE Space</h3>
+      <div class="form-control">
+        <input type="text" id="gratitude" placeholder="e.g. I'm grateful for my family...">
+        <button type="submit" class="submit-btn">submit</button>
       </div>
+    </form>
+    <!-- list -->
+    <div class="gratitude-container">
+      <div class="gratitude-list"></div>
+      <button type="button" class="clear-btn">clear items</button>
+    </div>
     <!-- button -->
     <!-- <div class="affirmation-container">
       <div class="affirmation-text">
       </div>
     </div> -->
 
-    </section>
-    
-    <!-- Button Change Background-->
-    <div class="btn-bg-container">
-      <button class="btn-bg-change" id="btn-bg-change">Change Background</button>
-    </div>
+  </section>
 
-    <!- Video Background -->
+  <!-- Button Change Background-->
+  <div class="btn-bg-container">
+    <button class="btn-bg-change" id="btn-bg-change">Change Background</button>
+  </div>
+
+  <!-- Video Background -->
     <div class="videoBg">
-      <video src="videos/pexels-rostislav-uzunov-7385122.mp4" autoplay loop></video>
+      <video src="videos/pexels-rostislav-uzunov-7385122.mp4" autoplay loop muted></video>
     </div>
 
     <!-- Music Player -->
     <div class="music-container">
       <div class="music-info">
-          <h4 id="title">Spatial</h4>
-          <div class="progress-container">
-              <div class="progress">
-              </div>
-           </div>
+        <h4 id="title">Spatial</h4>
+        <div class="progress-container">
+          <div class="progress">
+          </div>
+        </div>
       </div>
       <audio src="music/Spatial.mp3" id="audio"></audio>
       <div class="img-container">
-          <img src="images/Spatial.jpg" alt="music-cover" id="cover">
+        <img src="images/Spatial.jpg" alt="music-cover" id="cover">
       </div>
       <div class="navigation">
-          <button class="action-btn" id="prev">
-              <i class="fas fa-backward"></i>
-          </button>
-          <button class="action-btn action-btn-big" id="play">
-              <i class="fas fa-play"></i>
-          </button>
-          <button class="action-btn" id="next">
-              <i class="fas fa-forward"></i>
-          </button>
+        <button class="action-btn" id="prev">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button class="action-btn action-btn-big" id="play">
+          <i class="fas fa-play"></i>
+        </button>
+        <button class="action-btn" id="next">
+          <i class="fas fa-forward"></i>
+        </button>
       </div>
-  </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="btn-info-container">
+      <a class="modal-btn">
+        <i class="fas fa-info-circle fa-3x"></i>
+      </a>
+    </div>
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <p>Hey folks!</p>
+        <p>Thanks for visiting <strong><em>GRATITUDE Space.</em></strong></p>
+
+        <p>I wanted to create an environment that would motivate others to take time each day to reflect on the things
+          they are grateful for.</p>
+
+        <p>With each gratitude item you enter, you will get a new inspirational quote.</p>
+
+        <p>You can also fine tune your experience by picking a <u>song</u> and <u>animated background</u> that fits your
+          mood.</p>
+
+        <p>Stay blessed, stay grateful! 🙏</p>
+        <p><em>- Tom</em></p>
+        <button class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
 
     <!-- javascript -->
+    <script src="modal.js"></script>
     <script src="backgroundVideo.js"></script>
     <script src="affirmations.js"></script>
     <script src="musicPlayer.js"></script>
     <script src="main.js"></script>
-  </body>
+</body>
 </html>
