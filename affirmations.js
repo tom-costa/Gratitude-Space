@@ -37,7 +37,7 @@ const affirmationList = [
     "People with goals succeed because they know where they’re going",
     "All you need is the plan, the roadmap, and the courage to press on to your destination",
     "The opposite of courage in our society is not cowardice... it is conformity",
-    "Whenever we’re afraid, it’s because we don’t know enough. If we understood enough, we would never be afraid",
+    // "Whenever we’re afraid, it’s because we don’t know enough. If we understood enough, we would never be afraid",
     "The past does not equal the future",
     "The path to success is to take massive, determined action",
     "It’s what you practice in private that you will be rewarded for in public",

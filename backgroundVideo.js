@@ -1,4 +1,4 @@
-const videoSources = ["assets/pexels-rostislav-uzunov-7385122.mp4","assets/pexels-rostislav-uzunov-9629255.mp4", "assets/productionID_4779866.mp4", "assets/pexels-rostislav-uzunov-8303104.mp4"];
+const videoSources = ["assets/pexels-rostislav-uzunov-7385122.mp4","assets/productionID_4779866.mp4", "assets/pexels-rostislav-uzunov-9629255.mp4", "assets/pexels-rostislav-uzunov-8303104.mp4"];
 
 const btnBg = document.querySelector(".btn-bg-change");
 

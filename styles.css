@@ -4,6 +4,7 @@ Fonts
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 /*
 =============== 
@@ -62,9 +63,9 @@ Variables
   --input-hover: #FCF5C7;
   
   --modal-background: #FF715B;
-  --nice-yellow: #FEA82F;
-  --nice-red: #FF2E00;
-  --btn-submit: #1EA896;
+  --clr-orange: #FEA82F;
+  --clr-red: #FF2E00;
+  /* --btn-submit: #1EA896; */
 }
 /*
 =============== 
@@ -175,16 +176,18 @@ p {
 }
 
 .section-center {
-  width: 90vw;
+  /* width: 90vw;
   margin: 0 auto;
   max-width: 35rem;
-  margin-top: 8rem;
+  margin-top: 8rem; */
 }
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
 }
+
+
 main {
   min-height: 100vh;
   display: grid;
@@ -196,12 +199,18 @@ Gratitude List
 ===============
 */
 .section-center {
-  background: var(--modal-background);
+  /* background: var(--modal-background); */
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   padding: 2rem;
-  background-color: #8383838a;
+  /* background-color: #8383838a; */
+  background-color: rgba(255,255,255, 0.5);
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 35rem;
+  margin-top: 8rem;
+  box-shadow: 5px 0px 20px rgb(46, 45, 45);
 }
 .section-center:hover {
   box-shadow: var(--dark-shadow);
@@ -218,24 +227,25 @@ Gratitude List
   text-transform: capitalize;
 }
 .alert-danger {
-  color: #721c24;
-  background: #f8d7da;
+  color: var(--clr-red);
+  background: rgba(255,255,255, 0.5);
 }
 .alert-success {
   color: #155724;
-  background: #d4edda;
+  background-color: rgba(255,255,255, 0.5);
 }
 .gratitude-form h3 {
   color: var(--input-hover);
   margin-bottom: 1.5rem;
   text-align: center;
+  color: var(--text-clr);
 }
 .form-control {
   display: flex;
   justify-content: center;
   height:3rem;
-  
 }
+
 #gratitude {
   padding: 0.25rem;
   padding-left: 1rem;
@@ -245,15 +255,15 @@ Gratitude List
   border-color: transparent;
   font-size: 1rem;
   flex: 1 0 auto;
-  color: var(--clr-grey-5);
+  /* color: var(--clr-grey-5); */
 }
 #gratitude::placeholder {
-  font-family: var(--ff-secondary);
-  color: var(--clr-grey-5);
+  font-style: italic;
 }
 .submit-btn {
-  background: var(--btn-submit);
-  color:var(--page-background);
+  background: #28a745;
+  /* color:var(--page-background); */
+  color:white;
   border-color: transparent;
   flex: 0 0 5rem;
   display: grid;
@@ -269,8 +279,8 @@ Gratitude List
   font-size: 0.85rem;
 }
 .submit-btn:hover {
-  background: var(--clr-primary-5);
-  color: var(--page-background);
+  background: #1a6e2d;
+  color: rgb(165, 163, 163);
 }
 
 .gratitude-container {
@@ -282,7 +292,7 @@ Gratitude List
   visibility: visible;
 }
 .gratitude-item {
-  background-color: var(--text-input);
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -293,7 +303,7 @@ Gratitude List
   text-transform: capitalize;
 }
 .gratitude-item:hover {
-  color: var(--nice-yellow);
+  color: var(--clr-orange);
   background: var(--input-hover);
 }
 .gratitude-item:hover .title {
@@ -301,7 +311,6 @@ Gratitude List
 }
 .title {
   margin-bottom: 0;
-
   color: var(--text-clr);
   letter-spacing: 2px;
   transition: var(--transition);
@@ -316,7 +325,7 @@ Gratitude List
   transition: var(--transition);
 }
 .edit-btn {
-  color: var(--btn-submit);
+  color: #28a745;
 }
 .edit-btn:hover {
   color: var(--btn-submit);
@@ -333,53 +342,78 @@ Gratitude List
   height: 2rem;
   display: grid;
   align-items: center;
-
   border-color: var(--grocery-input);
   border-radius: var(--radius);
   color: var(--page-background);
   margin: 0 auto;
   font-size: 0.95rem;
-  letter-spacing: var(--spacing);
+  /* letter-spacing: var(--spacing); */
   cursor: pointer;
   transition: var(--transition);
   margin-top: 1.25rem;
 }
 .clear-btn:hover {
-  color: var(--clr-red-dark);
+  color: var(--clr-red);
 }
 
 .btn-bg-container{
   margin:2rem;
-  /* display: flex;
-  justify-content: center;
-  align-items:center; */
   position:absolute;
   top:0;
   left:0;
 }
 
 .btn-bg-change{
-  padding:1rem;
+  padding:0.7rem;
   border-radius: var(--radius);
   font-family: var(--ff-secondary);
   font-size: 0.95rem;
-  color: var(--page-background);
+  background-color:white;
+  color:#28a745;
+  box-shadow: 5px 0px 20px rgb(46, 45, 45);
 }
-
-.affirmation-container {
-  height:4rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.affirmation-text{
-  font-size:20px;
+.btn-bg-change:hover{
+  background-color:rgba(54, 54, 54, 0.87);
   color:white;
 }
 
-/* Test Video BG */
+/*  Affirmation Quotes: */
+.affirmation-container {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:8rem;
+  margin-bottom:-3rem;
+  padding: 0 5%;
+  box-shadow: 1 20px 0 rbga(252, 169, 169, 0.6);
+}
+.affirmation-text{
+  font-size:2rem;
+  color:white;
+  text-align:center;
+  font-style:italic;
+  text-shadow: 10px 10px 25px rgba(245, 245, 245),
+    -10px 10px 25px rgba(245, 245, 245),
+    -10px -10px 25px rgb(245, 245, 245),
+    10px -10px 25px rgb(245, 245, 245);
+}
+
+
+@media screen and (min-width: 760px) {
+  .affirmation-container {
+    padding: 0 15%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .affirmation-container {
+    margin-bottom:-7rem;
+  }
+}
+
+/* Video Background: */
 video {
-  position:absolute;
+  position:fixed;
   left:0;
   top:0;
   height:100%;
@@ -388,3 +422,155 @@ video {
   display:block;
   object-fit:cover;
 }
+
+/* MUSIC PLAYER: */
+
+.music-container{
+    background-color:rgba(54, 54, 54, 0.87);
+    border-radius:15px;
+    box-shadow: 1 20px 0 rbga(252, 169, 169, 0.6);
+    display:flex;
+    position:fixed;
+    padding:20px 20px;
+    margin:100px 20px;
+    z-index:10;
+    bottom:0;
+    left:0;
+    width:330px;
+    box-shadow: 5px 0px 20px rgb(46, 45, 45);
+}
+
+@media screen and (max-width: 1270px) {
+  .music-container {
+    position:absolute;
+    bottom:0;
+    
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .music-container {
+    position:relative;
+    /* bottom: 50%; */
+    left: 50%;
+    transform: translate(-55%);
+  }
+}
+
+.img-container {
+    position:relative;
+    width:100px;
+    margin-bottom:10px;
+}
+
+.img-container::after {
+    /* content:'';
+    background-color:white;
+    height:20px;
+    width:20px;
+    position:absolute;
+    left: 50%;
+    bottom:50%;
+    border-radius:50%;
+    transform: translate(-50%, -50%); */
+}
+
+.img-container img{
+    width:inherit;
+    height:85px;
+    width:85px;
+    border-radius: 50%;
+    border:1px solid rgb(199, 199, 199);
+    object-fit: cover;
+    position:absolute;
+    bottom:0;
+    left:0;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+    z-index:10;
+}
+
+.music-container.play .img-container img{
+    animation-play-state: running;
+}
+
+@keyframes rotate{
+    from {
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+
+.navigation {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: transparent;
+    border:0;
+    padding:10px;
+    margin: 0 5px;
+    color: #dfdbdf;
+    font-size:20px;
+    cursor: pointer;
+}
+.action-btn :hover {
+  color:grey;
+}
+
+.action-btn-big{
+    color: #cdc2d0;
+    font-size:30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+    background-color: rgba(255,255,255, 0.5);
+    border-radius:15px 15px 0 0;
+    position:absolute;
+    top:0;
+    left: 20px;
+    width: calc(100% - 40px);
+    opacity:0;
+    transform: translateY(0%);
+    padding:10px 10px 10px 85px;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    box-shadow: 5px 0px 20px rgb(46, 45, 45);
+    height:50px;
+}
+
+.music-info h4 {
+    margin:0;
+}
+
+.music-container.play .music-info{
+    transform: translateY(-100%);
+    opacity:1;
+}
+
+.progress-container{
+    background:white;
+    /* color:black; */
+    cursor: pointer;
+    border-radius: 5px;
+    margin:10px 0;
+    height: 5px;
+    width:100%;
+}
+
+.progress{
+    background-color:#28a745;
+    border-radius:5px;
+    height:100%;
+    width:0%;  // JS to increase width as it plays
+    transition: width 0.1s linear
+}
+
