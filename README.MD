@@ -1,11 +1,10 @@
-
-![Alt Text](https://github.com/tom-costa/Shopping-List-App/blob/main/GRATITUDE.gif "GRATITUDE Space gif")
+<p align="center">
+  <img src="https://github.com/tom-costa/Shopping-List-App/blob/main/GRATITUDE.gif" alt="GRATITUDE Space gif"/>
+</p>
 
 # GRATITUDE Space
 
-## Shopping List App that allows users to Create, Edit and Delete items from a list.<br>Saves the data onto the Local Storage.
-
-<p align="center"><project-description> CRUD Application that allows users to Create, Read, Update and Delete items from a list (gratitude items in this case) <br>Data is saved onto the Local Storage.</p>
+<p> CRUD Application that allows users to Create, Read, Update and Delete items from a list (gratitude items in this case) <br>Data is saved onto the Local Storage.</p>
 <p>I wanted to create a "zen" atmosphere, so I added features to let the user change the animated background and song to fit their mood. This project had heavy emphasis on user experience and keeping the code modular (separate JS file for each functionality + use of CSS variables.)</p>
 <ul>
 <li> Local Storage - Gratitude items can be created, read, updated and deleted. All saved to Local Storage. </li>
