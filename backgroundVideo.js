@@ -10,7 +10,7 @@ btnBg.addEventListener('click', function(){
     } else {
         bgchoice = 0
     }
-    document.querySelector('.videoBg').innerHTML = `<video src=${videoSources[bgchoice]} autoplay loop></video>`
+    document.querySelector('.videoBg').innerHTML = `<video src=${videoSources[bgchoice]} muted autoplay playsinline loop></video>`
 });
 
 
