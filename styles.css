@@ -157,7 +157,7 @@ Gratitude List
   width: 90vw;
   margin: 0 auto;
   max-width: 35rem;
-  margin-top: 8rem;
+  margin-top: 12rem;
   box-shadow: 5px 0px 20px rgb(46, 45, 45);
 }
 .section-center:hover {
@@ -357,7 +357,7 @@ Gratitude List
 
 @media screen and (max-width: 600px){
   .affirmation-container {
-    margin-bottom:-6rem;
+    margin-bottom:-10rem;
   }
 }
 

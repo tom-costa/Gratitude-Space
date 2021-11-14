@@ -10,7 +10,7 @@ const playBtn = document.querySelector('#play');
 const nextBtn = document.querySelector('#next');
 
 // Array with Song titles:
-const songs = [ "Spatial", "Adventure is Calling", "The long ride home", "Thermal", "Live it"]
+const songs = [ "Thermal", "The long ride home", "Spatial", "Adventure is Calling", "Live it"]
 
 // Song Index (keep track of songs):
 let songIndex = 0;
