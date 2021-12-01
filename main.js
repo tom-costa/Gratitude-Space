@@ -108,6 +108,7 @@ function deleteItem(e){
     list.removeChild(element);
     if (list.children.length === 0) {
         container.classList.remove("show-container");
+        clearAffirmation();
     }
     displayAlert("item removed", "danger");
     setBackToDefault();
